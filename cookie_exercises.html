@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Exercises</title>
+  <style>
+    *,
+    *::before,
+    *::after{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: content-box;
+    }
+
+    body{
+      background: gray;
+      height: 200vh;
+    }
+
+    .cookie{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: red;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    p{
+     font-size: 1rem;
+     padding: 15px 0;
+
+    }
+
+    .close{
+      width: 20px;
+      height: 20px;
+      background: rgb(175, 28, 28);
+      color: white;
+      border: 1px black solid;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="cookie">
+    <p>This website uses cookies to give you an incredible experience. By using this website you agree to the<a href="#">terms</a></p>
+    <button class="close">&times;</button>
+  </div>
+</body>
+</html>

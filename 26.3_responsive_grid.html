@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Basics</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    .grid{
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-areas: 
+      'header header header header'
+      'sidebar content content sidebar2'
+      'footer footer footer footer'
+    }
+
+    .item{
+      border-radius: 10px 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 20px;
+    }
+
+    .header{
+      grid-area: header;
+      background: red;
+    }
+    .sidebar{
+      grid-area: sidebar;
+      background: blue;
+    }
+    .content{
+      grid-area: content;
+      background: green;
+    }
+
+    .sidebar2{
+      grid-area: sidebar2;
+      background: purple;
+    }
+
+    .footer{
+      grid-area: footer;
+      background: yellow;
+    }
+
+    @media(max-width: 768px){
+      .grid{
+      grid-template-areas: 
+      'header header header header'
+      'sidebar content content content'
+      'sidebar2 sidebar2 sidebar2 sidebar2 '
+      'footer footer footer footer'
+      }
+    }
+    
+    @media(max-width: 500px){
+      .grid{
+      grid-template-areas: 
+      'header'
+      'sidebar'
+      'content'
+      'sidebar2'
+      'footer'
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item header">Header</div>
+    <div class="item sidebar">Sidebar</div>
+    <div class="item content">Content<br>More content than we had before so this column is now quite tall</div>
+    <div class="item sidebar2">Sidebar 2</div>
+    <div class="item footer">Footer</div>
+  </div>
+</body>
+</html>
